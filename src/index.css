@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 230 25% 5%;
+    --foreground: 210 20% 92%;
+    --card: 230 20% 9%;
+    --card-foreground: 210 20% 92%;
+    --primary: 175 80% 50%;
+    --primary-foreground: 230 25% 5%;
+    --secondary: 230 15% 15%;
+    --secondary-foreground: 210 20% 85%;
+    --muted: 230 15% 12%;
+    --muted-foreground: 215 15% 55%;
+    --accent: 40 90% 60%;
+    --accent-foreground: 230 25% 5%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 230 15% 18%;
+    --input: 230 15% 18%;
+    --ring: 175 80% 50%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', sans-serif; }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-card/60 backdrop-blur-xl border border-border/30 rounded-xl;
+    box-shadow: 0 8px 32px hsl(var(--background) / 0.5), inset 0 1px 0 hsl(210 20% 92% / 0.05);
+  }
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary;
+    background-size: 200% auto;
+    animation: gradient-shift 4s ease infinite;
+  }
+  .animated-bg {
+    background: radial-gradient(ellipse at 20% 50%, hsl(var(--primary) / 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, hsl(var(--accent) / 0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 80%, hsl(175 60% 40% / 0.05) 0%, transparent 50%);
+    animation: bg-pulse 8s ease-in-out infinite alternate;
+  }
+  .hover-glow { @apply transition-all duration-500; }
+  .hover-glow:hover { box-shadow: 0 0 30px hsl(var(--primary) / 0.2), 0 0 60px hsl(var(--primary) / 0.1); }
+  .section-fade-in {
+    opacity: 0; transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .section-fade-in.visible { opacity: 1; transform: translateY(0); }
+}
+
+@layer utilities {
+  .text-glow-sm { text-shadow: 0 0 10px hsl(var(--primary) / 0.3); }
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 200% center; }
+}
+@keyframes bg-pulse {
+  0% {
+    background: radial-gradient(ellipse at 20% 50%, hsl(var(--primary) / 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, hsl(var(--accent) / 0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 80%, hsl(175 60% 40% / 0.05) 0%, transparent 50%);
+  }
+  100% {
+    background: radial-gradient(ellipse at 40% 30%, hsl(var(--primary) / 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 60% 70%, hsl(var(--accent) / 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 30% 60%, hsl(175 60% 40% / 0.06) 0%, transparent 50%);
+  }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-10px) rotate(1deg); }
+  66% { transform: translateY(5px) rotate(-1deg); }
+}
