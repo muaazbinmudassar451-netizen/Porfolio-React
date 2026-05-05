@@ -46,11 +46,15 @@ const HeroSection = () => {
           <a href="#contact" className="px-8 py-3.5 rounded-xl border border-border bg-card/40 text-foreground font-semibold hover:border-primary/50 transition-all duration-500 hover:-translate-y-0.5">Let's Talk</a>
         </div>
         <div className="flex items-center justify-center gap-5">
-          {[Github, Linkedin, Instagram].map((Icon, i) => (
-            <a key={i} href="#" className="w-11 h-11 rounded-xl border border-border bg-card/40 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/50 transition-all duration-300">
-              <Icon size={18} />
-            </a>
-          ))}
+          <a href="https://github.com/muaazbinmudassar451-netizen" target="_blank" rel="noreferrer" className="w-11 h-11 rounded-xl border border-border bg-card/40 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/50 transition-all duration-300">
+            <Github size={18} />
+          </a>
+          <a href="https://instagram.com/moaaz_shah" target="_blank" rel="noreferrer" className="w-11 h-11 rounded-xl border border-border bg-card/40 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/50 transition-all duration-300">
+            <Instagram size={18} />
+          </a>
+          <a href="https://www.linkedin.com/in/muaaz-mudassar-955855327/" target="_blank" rel="noreferrer" className="w-11 h-11 rounded-xl border border-border bg-card/40 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/50 transition-all duration-300">
+            <Linkedin size={18} />
+          </a>
         </div>
         <a href="#about" className="absolute bottom-10 left-1/2 -translate-x-1/2 text-muted-foreground animate-bounce"><ArrowDown size={24} /></a>
       </div>

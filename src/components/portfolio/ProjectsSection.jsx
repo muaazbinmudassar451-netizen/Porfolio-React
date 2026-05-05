@@ -1,12 +1,12 @@
 import React from "react";
 import { useScrollReveal } from "@/hooks/useScrollReveal.js";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 const projects = [
-  { title: "E-Commerce Platform", description: "A full-stack e-commerce solution with real-time inventory, Stripe payments, and admin dashboard.", tags: ["React", "Node.js", "PostgreSQL", "Stripe"], color: "from-primary/20 to-accent/10" },
-  { title: "AI Dashboard", description: "Analytics dashboard with AI-powered insights, real-time data visualization, and custom reports.", tags: ["Next.js", "Python", "TensorFlow", "D3.js"], color: "from-accent/20 to-primary/10" },
-  { title: "Social Media App", description: "Real-time social platform with stories, messaging, and AI content recommendations.", tags: ["React Native", "Firebase", "WebSocket"], color: "from-primary/15 to-accent/15" },
-  { title: "3D Portfolio", description: "Interactive 3D portfolio experience with custom shaders and physics-based animations.", tags: ["Three.js", "GLSL", "React", "Framer"], color: "from-accent/15 to-primary/20" },
+  { title: "E-Commerce Platform", description: "A full-stack e-commerce solution with real-time inventory, Stripe payments, and admin dashboard.", tags: ["Tailwind", "SQL", "JS", "React", "Laravel"], color: "from-primary/20 to-accent/10", demo: "https://e-commerce-project-kappa-khaki.vercel.app/" },
+  { title: "Appointment Booking System", description: "Appointment booking system with calendar scheduling and responsive client booking experience.", tags: ["Tailwind", "SQL", "JS", "React", "Laravel"], color: "from-accent/20 to-primary/10", demo: "https://appointment-booking-lemon-chi.vercel.app/" },
+  { title: "Learning Management System", description: "A modern LMS platform for courses, student progress tracking, and scalable learning workflows.", tags: ["Tailwind", "SQL", "JS", "React", "Laravel"], color: "from-primary/15 to-accent/15", demo: "https://lms-project-green-ten.vercel.app/" },
+  { title: "More Projects Coming Soon", description: "I’m building more amazing projects—stay tuned for new releases and live demos.", tags: ["Coming Soon"], color: "from-accent/15 to-primary/20", demo: null },
 ];
 
 const ProjectsSection = () => {
@@ -32,8 +32,11 @@ const ProjectsSection = () => {
                   {project.tags.map((tag) => (<span key={tag} className="px-3 py-1 text-xs rounded-full bg-primary/10 text-primary border border-primary/20">{tag}</span>))}
                 </div>
                 <div className="flex gap-3">
-                  <a href="#" className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors duration-300"><Github size={16} /> Code</a>
-                  <a href="#" className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-accent transition-colors duration-300"><ExternalLink size={16} /> Live Demo</a>
+                  {project.demo ? (
+                    <a href={project.demo} target="_blank" rel="noreferrer" className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-accent transition-colors duration-300"><ExternalLink size={16} /> Live Demo</a>
+                  ) : (
+                    <span className="flex items-center gap-1.5 text-sm text-muted-foreground">More Coming Soon</span>
+                  )}
                 </div>
               </div>
             </div>

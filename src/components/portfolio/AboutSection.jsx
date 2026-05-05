@@ -1,12 +1,12 @@
 import React from "react";
 import { useScrollReveal } from "@/hooks/useScrollReveal.js";
-import { Code2, Palette, Zap, Coffee } from "lucide-react";
+import { Code2, Palette, Zap, Clock } from "lucide-react";
 
 const stats = [
-  { icon: Code2, label: "Projects Done", value: "50+" },
-  { icon: Palette, label: "Design Awards", value: "12" },
-  { icon: Zap, label: "Happy Clients", value: "30+" },
-  { icon: Coffee, label: "Cups of Coffee", value: "∞" },
+  { icon: Code2, label: "Projects Done", value: "10+" },
+  { icon: Palette, label: "Teachnologies", value: "10+" },
+  { icon: Zap, label: "Practice", value: "Demo Work" },
+  { icon: Clock, label: "Coding Hours", value: "100+" },
 ];
 
 const AboutSection = () => {
