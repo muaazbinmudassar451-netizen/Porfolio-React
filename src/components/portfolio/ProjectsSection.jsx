@@ -6,6 +6,7 @@ const projects = [
   { title: "E-Commerce Platform", description: "A full-stack e-commerce solution with real-time inventory, Stripe payments, and admin dashboard.", tags: ["Tailwind", "SQL", "JS", "React", "Laravel"], color: "from-primary/20 to-accent/10", demo: "https://e-commerce-project-kappa-khaki.vercel.app/" },
   { title: "Appointment Booking System", description: "Appointment booking system with calendar scheduling and responsive client booking experience.", tags: ["Tailwind", "SQL", "JS", "React", "Laravel"], color: "from-accent/20 to-primary/10", demo: "https://appointment-booking-lemon-chi.vercel.app/" },
   { title: "Learning Management System", description: "A modern LMS platform for courses, student progress tracking, and scalable learning workflows.", tags: ["Tailwind", "SQL", "JS", "React", "Laravel"], color: "from-primary/15 to-accent/15", demo: "https://lms-project-green-ten.vercel.app/" },
+  { title: "Cricket Scoring App", description: "A cricket scoring app for tracking matches, updating runs, wickets, overs, and live score details.", tags: ["Cricket", "Scoring", "JS", "React"], color: "from-accent/15 to-primary/15", demo: "https://muaazbinmudassar451-netizen.github.io/scorer/" },
   { title: "More Projects Coming Soon", description: "I’m building more amazing projects—stay tuned for new releases and live demos.", tags: ["Coming Soon"], color: "from-accent/15 to-primary/20", demo: null },
 ];
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { ArrowDown, Github, Instagram, Linkedin, Twitter } from "lucide-react";
+import { ArrowDown, Github, Instagram, Linkedin, Sparkles } from "lucide-react";
 
 const roles = ["Full Stack Developer", "UI/UX Designer", "Creative Coder", "Problem Solver"];
 
@@ -22,12 +22,13 @@ const HeroSection = () => {
   }, [displayed, deleting, roleIndex]);
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 pb-16 md:pt-24">
       <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary/10 rounded-full blur-[100px] animate-float" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/8 rounded-full blur-[120px] animate-float" style={{ animationDelay: "3s" }} />
       <div className="relative z-10 text-center px-6 max-w-4xl">
-        <div className="inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-primary text-sm font-medium mb-8 animate-fade-in">
-          ✨ Welcome to my universe
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-primary text-sm font-medium mb-8 animate-fade-in">
+          <Sparkles size={16} />
+          <span>Welcome to my universe</span>
         </div>
         <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
           <span className="text-foreground">Hi, I'm </span>
